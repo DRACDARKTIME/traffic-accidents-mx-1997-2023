@@ -7,6 +7,6 @@ def top_5(colum=None,df=None, tc=None,tc_name=None, tc_option=False, top=5):
         etiquetas_x = tc[tc[colum].isin(top_5_colum)][tc_name]
         etiquetas_x = etiquetas_x.tolist()
     else:
-        etiquetas_x = []
+        etiquetas_x = top_5_colum.tolist()
     df_top_5 = df[df[colum].isin(top_5_colum)]
     return df_top_5, etiquetas_x
